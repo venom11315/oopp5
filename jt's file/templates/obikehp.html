@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Obikes App
+</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="obikecss.css") }}">
+  <script src="/static/obikejs.js"></script>
+
+
+</head>
+
+<style>
+    .balance{
+	font-size:50px;
+	float:right;
+	/*change to hand cursor*/
+	cursor:pointer;
+	/*round corners*/
+	border-radius: 15px;
+    margin-right:10px;
+    margin-bottom:20px;
+    margin-top:-10px;
+    background:#F05F40;
+	/*shadow before clicking button*/
+	box-shadow: 0 9px #999;
+	height: 100px;
+	width: 370px;
+	color:white;
+}
+.balance:active{
+  /*shadow after clicking button- compressed shadow*/
+  box-shadow: 0 5px #666;
+  /*how far the button move when clicked*/
+  transform: translateY(5px);
+}
+</style>
+
+<body>
+<head>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylefoodorder.css">
+  <link rel="stylesheet" href="css/animate.css">
+	<script src="js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
+  <script src="js/jquery.slim.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<nav class="navbar-inverse navbar-toggleable-md justify-content-center" style="background-color: rgb(128, 128, 128)">
+<div class="container">
+<button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#mainNavBar"><span class="navbar-toggler-icon"></span></button>
+<a href="#" class="navbar-brand" >
+</a>
+<div class="collapse navbar-collapse" id="mainNavBar">
+<ul class="nav navbar-nav">
+
+ <!-- Dropdown for service -->
+     <nav class="navbar-inverse navbar-toggleable-md justify-content-center" style="background-color: rgb(128, 128, 128)">
+    <div class="container">
+            <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#mainNavBar"><span class="navbar-toggler-icon"></span></button>
+            <a href="#" class="navbar-brand" >
+                <img src="smartmobi.png" style="width:60px;" class="navbar-brand" alt="Then And Now Logo">
+            </a>
+        <div class="collapse navbar-collapse" id="mainNavBar">
+    <ul class="nav navbar-nav">
+         <li><a href="smartmobihomepage.html" class="nav-link">Home</a></li>
+
+         <!-- Ended -->
+         <li class="nav-item"><a href="../../../" class="nav-link">Mode of Transport : Train</a></li>       <!-- DIVYESH PAGE -->
+		 <li class="nav-item"><a href="../../../" class="nav-link">Mode of Transport : Bus</a></li>         <!-- DIVYESH PAGE -->
+		 <li class="nav-item"><a href="../../../" class="nav-link">Mode of Transport : Obikes</a></li>      <!-- YL&JG PAGE-->
+    </ul>
+        </div>
+</nav>
+</header>
+   <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+
+<ul id="login-dp" class="dropdown-menu">
+
+</nav>
+</nav>
+</head>
+<h1 class="OA">OBIKES APP</h1>
+<img id="instr" src="https://image.o.bike/image/647252f930728993efa71726200510d8.png" alt="How To Use" width="100%">
+<button type="button" class="btn" onclick="myFunction()" id="start" ><span class="st"><strong>START</strong></span></button>
+<button type="button" class="btn" onclick="myFunction2()" id="stop" ><span class="stop"><strong>LOCK</strong></span></button>
+<table class="box">
+<tr>
+<th id="title">PRICE</th>
+</tr>
+<tr>
+<td><span id="price" ></span></td>
+</tr>
+</table>
+<br>
+<br>
+<h2 class="ensure">HELP ENSURE THE <span class="safety">SAFETY</span> OF OUR FELLOW SINGAPOREANS</h2>
+<p>The reason why we create this feature is to prevent user's from parking haphazardly.<br>Only by reaching a bicycle parking zone, one can lock the bicycle lock
+and stop the payment from running.</p>
+<h3 class="change">TO CHANGE FROM THIS</h3>
+<img class="bad" src="http://www.hobbyisit.com/wp-content/uploads/2017/05/illegally-parked-obike-3675008.png" width="100%" height="400px"><br><br>
+<h3 class="changes">TO THIS</h3><br>
+<img src="https://cdn2.i-scmp.com/sites/default/files/images/methode/2017/09/16/63a9f4b2-9a86-11e7-a089-5a7a21c623ca_1320x770_112526.JPG" width="100%"><br><br><br>
+
+<form method="post" action="">
+    <button formmethod="post" class="balance">Check Balance</button>
+</form>
+
+<script>
+  // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyB8n_wdQsc4wRwfUEWb1QnlK5B1Qh0enQw",
+    authDomain: "library-system-c45f5.firebaseapp.com",
+    databaseURL: "https://library-system-c45f5.firebaseio.com",
+    projectId: "library-system-c45f5",
+    storageBucket: "library-system-c45f5.appspot.com",
+    messagingSenderId: "364692408488"
+    };
+    firebase.initializeApp(config);
+
+    var left = window.price;
+    function myFunction(){
+    document.getElementById("start").disabled = true;
+	$("start").addClass("btn disabled");
+    var priceStart = 0;
+	window.price = setInterval(function(){
+	    priceStart += 1/1800;
+		ps2dp = priceStart.toFixed(2);
+    document.getElementById("price").textContent = "$" + ps2dp;
+	},1000);
+	}
+function myFunction2(){
+    document.getElementById("stop").disabled = true;
+	$("stop").addClass("btn disabled");
+	var forNum = prompt("State number: ");
+	if ( forNum == {{ numbGen }}){
+	    clearInterval(window.price);
+	    alert("Thank you for riding with us!" + {{ numbGen }} + forNum);
+	    //edit here
+	    var database = firebase.database();
+        var ref = database.ref('price');
+
+        var data = {
+            name: '{{ sname }}',
+            price: ps2dp
+        };
+
+        ref.push(data);
+
+        var jtlist = {{ here }};
+        for (jt in jtlist){
+            var database1 = firebase.database();
+            var ref1 = database1.ref('mynum');
+            bn_need = 'bn' + jtlist[jt];
+            var obj = {};
+            obj[bn_need] = jtlist[jt];
+            ref1.push(obj);
+        }
+
+		document.getElementById("stop").disabled = true;
+	    $("stop").addClass("btn disabled");
+	}
+	else if(forNum != {{ numbGen }}){
+	    var again = prompt("Invalid, try again!");
+		document.getElementById("stop").disabled = false;
+		$("stop").removeClass("btn disabled").addClass("btn");
+	}
+	}
+
+</script>
+
+</body>
+</html>

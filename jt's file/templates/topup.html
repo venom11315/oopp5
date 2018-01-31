@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>Top-up</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    h1{
+        text-align:center;
+        color:white;
+        font-size: 50px;
+    }
+    .back{
+        background:linear-gradient(-90deg, #FF8C00, orange);
+        margin-top:-30px;
+        margin-left:-10px;
+        width:1300px;
+        height:530px;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        margin-left:-10px;
+        width: 1300px;
+        height:80px;
+        font-size:30px;
+    }
+
+    .previous {
+        background-color: #A9A9A9;
+        color: white;
+        width:1300px;
+        height:100px;
+        margin-left:-7px;
+    }
+    #price{
+        margin-top:50px;
+        margin-left:500px;
+        margin-right:500px;
+        padding:100px;
+        border:2px solid black;
+    }
+    h3{
+        margin-top:50px;
+        text-align:center;
+        color:white;
+    }
+    .right{
+        margin-left:1050px;
+        color:white;
+        font-size:30px;
+    }
+</style>
+
+<body>
+<div class="back">
+    <h1>DEPOSIT</h1>
+    <h1 id="price"></h1>
+    <h3>Account Balance(S$)</h3>
+</div>
+<form method="post" action="">
+    <button formmethod="post" class="previous">My Payment<span class="right">&raquo;</span></button>
+</form>
+</body>
+
+<script>
+    document.getElementById('price').innerHTML= {{ dep }};
+</script>
+
+</html>
